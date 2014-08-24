@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 1.2'
 
 # Use Bootstrap framework for CSS
 gem 'bootstrap-sass', '~> 3.1.1'
+
+gem 'faker'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
