@@ -38,7 +38,11 @@ gem 'jbuilder', '~> 1.2'
 # Use Bootstrap framework for CSS
 gem 'bootstrap-sass', '~> 3.1.1'
 
+# Use faker to create fake test data
 gem 'faker'
+
+# Use Device user authentication gem
+gem 'devise'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
