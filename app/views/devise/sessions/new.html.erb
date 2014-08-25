@@ -12,16 +12,17 @@
         <%= f.label :password %>
         <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
       </div>
-      <div class="form-group">
-        <% if devise_mapping.rememberable? %>
-          <%= f.label :remember_me, class: 'checkbox' do %>
-            <%= f.check_box :remember_me %> Remember me
+    <div class="form-group">
+      <% if devise_mapping.rememberable? %>
+        <%= f.label :remember_me, class: 'checkbox' do %>
+          <%= f.check_box :remember_me %> Remember me
         <% end %>
-        <%= f.submit "Sign in", class: 'btn btn-success' %>
-      </div>
-      <div class="form-group">
-        <%= render "devise/shared/links" %>
-      </div>
-    <% end %>
+      <% end %>
+      <%= f.submit "Sign in", class: 'btn btn-success' %>
+    </div>
+    <div class="form-group">
+      <%= render "devise/shared/links" %>
+    </div>
+  <% end %>
   </div>
 </div>
