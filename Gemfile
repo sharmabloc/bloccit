@@ -47,6 +47,9 @@ gem 'devise'
 # Use Figaro to store sensitive data via environment variables
 gem 'figaro'
 
+# Use Pundit to manage user roles
+gem 'pundit'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
