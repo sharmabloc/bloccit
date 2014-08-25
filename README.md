@@ -10,6 +10,7 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+Need to have config/application.yml and config/application.example.yml to store and reference environmental variables
 
 * Database creation
 

@@ -44,6 +44,9 @@ gem 'faker'
 # Use Device user authentication gem
 gem 'devise'
 
+# Use Figaro to store sensitive data via environment variables
+gem 'figaro'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
