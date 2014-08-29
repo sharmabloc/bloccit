@@ -50,6 +50,9 @@ gem 'figaro'
 # Use Pundit to manage user roles
 gem 'pundit'
 
+# Use Redcarpet for Markdown
+gem 'redcarpet'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
