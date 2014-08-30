@@ -53,6 +53,13 @@ gem 'pundit'
 # Use Redcarpet for Markdown
 gem 'redcarpet'
 
+# Use image uploading and editing gems
+gem 'carrierwave'
+gem 'mini_magick'
+
+# Use Fog to access AWS S3
+gem 'fog'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
