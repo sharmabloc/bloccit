@@ -60,6 +60,9 @@ gem 'mini_magick'
 # Use Fog to access AWS S3
 gem 'fog'
 
+# Use Will_paginate to paginate
+gem 'will_paginate'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
