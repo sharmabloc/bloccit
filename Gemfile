@@ -12,6 +12,9 @@ end
 
 group :development do
   gem 'sqlite3'
+# Use better errors for debugging
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 # Use SCSS for stylesheets
@@ -62,6 +65,7 @@ gem 'fog'
 
 # Use Will_paginate to paginate
 gem 'will_paginate'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
