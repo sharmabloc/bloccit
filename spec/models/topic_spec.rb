@@ -1,13 +1,21 @@
 require 'rails_helper'
+include Warden::Test::Helpers 
+Warden.test_mode!
 
 describe Topic do 
-  include TestFactories
 
-  before do 
-    @user = authenticated_user
-    @public_topic = Topic.create # default is public_topic
+before do 
+    @user = create(:user)
+    post = create(:post, user: @user)
+    create(:comment, user: @user, post: post)
+    login_as(@user, :scope => :user)
+
+    @user2 = create(:user)
+    post = create(:post, user: @user2)
+    2.times { create(:comment, user: @user2, post: post)}
+
+    @public_topic = Topic.create(public: true) # default is public_topic
     @private_topic = Topic.create(public: false)
-    @topic_array = [@public_topic, @private_topic]
   end
 
   describe "publicly_viewable" do
