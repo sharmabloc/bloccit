@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
   before_action :load_post_and_vote
+  before_filter :authenticate_user!
 
   def up_vote
     update_vote!(1)
