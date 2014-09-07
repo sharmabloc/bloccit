@@ -5,25 +5,25 @@ Bloccit::Application.routes.draw do
   get "topics/show"
   get "topics/edit"
   devise_for :users
-    resources :users, only: [:update, :show]
+    resources :users, only: [:update, :show, :index]
   #get "posts/index"
   #get "posts/show"
   #get "posts/new"
   #get "posts/edit"
  resources :topics do 
-    resources :posts, except: [:index]
+    resources :posts, except: [:index], controller: 'topics/posts'
   end
     resources :topics do 
-      resources :posts, only: [] do
+      resources :posts, only: [:index] do
         resources :comments, only: [:create, :destroy]
-  #        resources :favorites, only: [:create, :destroy]
+     #   resources :favorites, only: [:create, :destroy]
 
   #      post '/up-vote' => 'votes#up_vote', as: :up_vote
    #     post '/down-vote' => 'votes#down_vote', as: :down_vote
       end
   end
 
-  resources :posts, only: [] do
+  resources :posts, only: [:index] do
     post '/up-vote' => 'votes#up_vote', as: :up_vote
     post '/down-vote' => 'votes#down_vote', as: :down_vote
 
