@@ -6,7 +6,7 @@ def associated_post(options={})
     topic:  Topic.create(name: 'Topic name'),
     user:   authenticated_user
   }.merge(options)
-  Post.create(post_options)
+  Post.create!(post_options)
 end
 
 def authenticated_user(options={})

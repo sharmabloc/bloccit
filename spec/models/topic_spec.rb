@@ -6,13 +6,13 @@ describe Topic do
 
 before do 
     @user = create(:user)
-    post = create(:post, user: @user)
-    create(:comment, user: @user, post: post)
+   # post = create(:post, user: @user)
+   # create(:comment, user: @user, post: post)
     login_as(@user, :scope => :user)
 
     @user2 = create(:user)
-    post = create(:post, user: @user2)
-    2.times { create(:comment, user: @user2, post: post)}
+ #   post = create(:post, user: @user2)
+ #   2.times { create(:comment, user: @user2, post: post)}
 
     @public_topic = Topic.create(public: true) # default is public_topic
     @private_topic = Topic.create(public: false)
@@ -26,7 +26,7 @@ before do
 
   describe "privately_viewable" do
     it "returns a relation of all private topics" do
-      expect(Topic.privately_viewable).to eq(@private_topic)
+      expect(Topic.privately_viewable.first).to eq(@private_topic)
     end
   end
 
